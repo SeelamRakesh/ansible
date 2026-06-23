@@ -1,0 +1,12 @@
+- name: Niginx Installation
+  hosts: web
+  tasks: 
+  - name: package Installation
+    ansible.builtin.package:
+    name: niginx
+    state: present
+  
+  - name: package start
+    ansible.builtin.service:
+    name: niginx
+    state: started
