@@ -1,6 +1,6 @@
 - name: Variables
   hosts: local
-  connections: local
+  connection: local
   Vars:
    COURSE: "DAWS with siva"
    DURATION: "5months"
