@@ -5,7 +5,7 @@
   - name: printing list through Loops
     ansible.builtin.package:
      name: "{{ item }}"
-     state: "{{ present }}"
+     state: present
     loop:
      - mysql
      - nginx
