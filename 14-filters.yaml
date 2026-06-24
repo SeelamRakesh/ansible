@@ -4,4 +4,4 @@
   tasks:
   - name : greetings
     ansibile.builtin.debug:
-     msg: "Hello Rakesh, {{ GREETING | default ('Good morning')}}"
+     msg: "Hello Rakesh, {{ GREETING | default ('Good morning') }}"
