@@ -1,0 +1,17 @@
+- name: Variable preference
+  hosts: local
+  connection: local
+  vars_prompt:
+   name: enter course
+   private: false
+  vars_files:
+   - course.yaml
+  vars: 
+   COURSE: "DAWS from Play "
+   TRAINER: "Sivakumar"
+  tasks:
+  - name: Print vars
+    vars: 
+     COURSE: "Ansible from TASK"
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Trainer is {{ TRAINER }}"
