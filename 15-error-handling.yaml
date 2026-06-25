@@ -6,6 +6,7 @@
   - name: Check User
     ansible.builtin.command: id roboshop
     register: user_output
+    ignore_errors: true
   
   - name: Usrer creation
     ansible.builtin.command: useradd roboshop
