@@ -3,10 +3,24 @@
   connection: local
   vars: 
    topics: linux, shell, terraform, ansible
-   tags:
+   tagsMap:
     course: ansible
     duration: 10
     sessions: 8
+   tagsList: [
+        {
+            "key": "course",
+            "value": "ansible"
+        },
+        {
+            "key": "duration",
+            "value": 10
+        },
+        {
+            "key": "sessions",
+            "value": 8
+        }
+    ]
   tasks:
   - name: greetings
     ansible.builtin.debug:
@@ -18,4 +32,8 @@
 
   - name: converting map to list 
     ansible.builtin.debug:
-     msg: "{{ tags | dict2items }}" 
+     msg: "{{ tagsMap | dict2items }}" 
+  
+  - name: converting list to map
+    ansible.builtin.debug:
+     msg: "{{ tagsList | items2dict }}"
