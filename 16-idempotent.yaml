@@ -1,0 +1,8 @@
+- name: Idempotency
+  hosts: local
+  connection: local
+  become: yes
+  tasks: 
+  - name : creating user
+    ansible.builtin.user:
+     name: roboshop
