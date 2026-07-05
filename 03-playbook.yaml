@@ -1,13 +1,35 @@
-- name: Niginx Installation
-  hosts: web
-  become: yes
+- name: Install and Start nginx
+  hosts: node
   tasks: 
-  - name: package Installation
-    ansible.builtin.package:
+  - name: Install nginx
+    ansible.builtin.dnf:
      name: nginx
      state: present
   
-  - name: package start
+  - name: Start nginx
     ansible.builtin.service:
      name: nginx
      state: started
+
+
+
+
+
+
+
+
+
+
+# - name: Niginx Installation
+#   hosts: web
+#   become: yes
+#   tasks: 
+#   - name: package Installation
+#     ansible.builtin.package:
+#      name: nginx
+#      state: present
+  
+#   - name: package start
+#     ansible.builtin.service:
+#      name: nginx
+#      state: started

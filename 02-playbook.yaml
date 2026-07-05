@@ -4,10 +4,3 @@
   - name : Print hello World
     ansible.builtin.debug:
      msg: "hello world"
-
-# - name: Hello World
-#   hosts: web
-#   tasks:
-#   - name: Print Hello World
-#     ansible.builtin.debug:
-#      msg: "Hello World"
