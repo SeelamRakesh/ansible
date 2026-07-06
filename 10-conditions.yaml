@@ -2,7 +2,7 @@
   connection: local
   hosts: local
   vars:
-   IS_LIVE: false
+   IS_LIVE: true
   tasks:
   - name: conditions
     ansible.builtin.debug:
