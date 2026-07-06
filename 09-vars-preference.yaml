@@ -1,20 +1,20 @@
 - name: Variable preference
   hosts: local
   connection: local
-  # vars_files:
-  #  - course.yaml
+  vars_files:
+   - course.yaml
   vars_prompt:
    - name: enter course
      private: false
    - name: enter trainer
      private: false
-  # vars: 
-  #  course: "DAWS from Play"
-  #  trianer: "Sivakumar"
+  vars: 
+   course: "DAWS from Play"
+   trianer: "Sivakumar"
   tasks:
   - name: Print vars
     # vars: 
     #  course: "Ansible from TASK"
     #  trianer: "Shiva"
     ansible.builtin.debug:
-      msg: "Course is {{ course }}, Trianer is {{ trianer }}"
+      msg: "Course is {{ course }}, Trianer is {{ trainer }}"
