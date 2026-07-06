@@ -1,13 +1,36 @@
-- name: Creating User
+- name: Creating user
   hosts: local
   connection: local
   become: yes
-  tasks:
-  - name: Check User
+  tasks: 
+  - name: Check user
     ansible.builtin.command: id roboshop
     register: user_output
     ignore_errors: true
   
-  - name: Usrer creation
+  - name: Add user
     ansible.builtin.command: useradd roboshop
     when: user_output.rc != 0
+
+
+
+
+
+
+
+
+
+
+# - name: Creating User
+#   hosts: local
+#   connection: local
+#   become: yes
+#   tasks:
+#   - name: Check User
+#     ansible.builtin.command: id roboshop
+#     register: user_output
+#     ignore_errors: true
+  
+#   - name: Usrer creation
+#     ansible.builtin.command: useradd roboshop
+#     when: user_output.rc != 0
