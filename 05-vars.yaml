@@ -1,13 +1,37 @@
-- name: Variables
+- name: Task Vraibles
   hosts: local
   connection: local
   vars:
-   COURSE: "DAWS with siva"
-   DURATION: "5 Months"
-   TRAINER: "Siva Kumar"
+   - course: "DAWS"
+   - trainer: "Shiva"
   tasks:
-   - name: Print Variables
-     vars:
-      COURSE: "ANSIBLE"
-     ansible.builtin.debug:
-      msg: "Course is {{ COURSE }}, Trainer is {{ TRAINER }}"
+  - name: Print Variables
+    vars:
+    - course: "Terraform"
+    ansible.builtin.debug:
+    msg: "Course is: {{ course }}, Trianer is: {{ Trainer }}"
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: Variables
+#   hosts: local
+#   connection: local
+#   vars:
+#    COURSE: "DAWS with siva"
+#    DURATION: "5 Months"
+#    TRAINER: "Siva Kumar"
+#   tasks:
+#    - name: Print Variables
+#      vars:
+#       COURSE: "ANSIBLE"
+#      ansible.builtin.debug:
+#       msg: "Course is {{ COURSE }}, Trainer is {{ TRAINER }}"
