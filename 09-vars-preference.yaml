@@ -11,8 +11,8 @@
    private: false
   tasks:
   - name: Print vars
-    vars: 
-     course: "Ansible from TASK"
-     trianer: "Shiva"
+    # vars: 
+    #  course: "Ansible from TASK"
+    #  trianer: "Shiva"
     ansible.builtin.debug:
       msg: "Course is {{ course }}, Trianer is {{ trianer }}"
