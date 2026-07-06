@@ -9,5 +9,5 @@
      msg: "Hello Rakesh, {{ GREETING | default ( 'good morning' ) }}"
 
   - name: splitting variable
-    ansible.builting.debug:
+    ansible.builtin.debug:
      msg: "{{ names | split(',') }}"
