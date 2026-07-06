@@ -7,7 +7,7 @@
   - name: Ansible sessions
     ansible.builtin.debug:
      msg: "Ansible is 7 sessions"
-    when: number of sessions > 6
+    when: number_of_sessions > 6
 
 
 
