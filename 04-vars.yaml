@@ -7,7 +7,7 @@
    - duration: "4 months"
   tasks:
   - ansible.builtin.debug:
-    msg: "Course is: {{ course }}, Trianer is: {{ Trainer }}"
+     msg: "Course is: {{ course }}, Trianer is: {{ Trainer }}"
 
 
 
