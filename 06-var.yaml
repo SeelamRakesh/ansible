@@ -7,28 +7,3 @@
   - name: print Variables
     ansible.builtin.debug: 
      msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# - name: Variables
-#   hosts: local
-#   connection: local
-#   vars_files:
-#   - course.yaml
-#   tasks:
-#    - name: print Variables
-#      ansible.builtin.debug:
-#       msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}"
