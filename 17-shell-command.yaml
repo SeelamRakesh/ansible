@@ -3,6 +3,5 @@
   hosts: local
   tasks:
   - name: Command module
-    ansible.builtin.command: cat /etc/Password
-  
+    ansible.builtin.command: cat /etc/passwd
   
