@@ -7,7 +7,7 @@
   
   - name: Shell module
     ansible.builtin.shell: cat /etc/passwd | grep root
-    register: { shell_output }
+    register: shell_output
   
   - name: Print output
     ansible.builtin.debug:
