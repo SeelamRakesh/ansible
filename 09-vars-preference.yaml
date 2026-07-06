@@ -5,12 +5,14 @@
    - course.yaml
   vars_prompt:
    - name: enter course
+     prompt: "enter course"
      private: false
    - name: enter trainer
+     prompt: "enter trainer"
      private: false
-  # vars: 
-  #  course: "DAWS from Play"
-  #  trianer: "Sivakumar"
+  vars: 
+   course: "DAWS from Play"
+   trianer: "Sivakumar"
   tasks:
   - name: Print vars
     # vars: 
