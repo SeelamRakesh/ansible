@@ -7,14 +7,14 @@
    - name: enter course
      private: false
    - name: enter trainer
-     private: true
+     private: false
   vars: 
    course: "DAWS from Play"
    trianer: "Sivakumar"
   tasks:
   - name: Print vars
-    vars: 
-     course: "Ansible from TASK"
-     trianer: "Shiva"
+    # vars: 
+    #  course: "Ansible from TASK"
+    #  trianer: "Shiva"
     ansible.builtin.debug:
       msg: "Course is {{ course }}, Trianer is {{ trianer }}"
