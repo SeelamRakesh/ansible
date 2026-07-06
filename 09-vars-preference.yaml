@@ -4,15 +4,15 @@
   vars_files:
    - course.yaml
   # vars: 
-  #  COURSE: "DAWS from Play"
-  #  TRAINER: "Sivakumar"
+  #  course: "DAWS from Play"
+  #  trianer: "Sivakumar"
   # vars_prompt:
   #  name: enter course
   #  private: false
   tasks:
   - name: Print vars
     vars: 
-     COURSE: "Ansible from TASK"
-     TRAINER: "Shiva"
+     course: "Ansible from TASK"
+     trianer: "Shiva"
     ansible.builtin.debug:
-      msg: "Course is {{ COURSE }}, Trainer is {{ TRAINER }}"
+      msg: "Course is {{ course }}, Trianer is {{ trianer }}"
