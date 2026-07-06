@@ -3,12 +3,12 @@
   connection: local
   vars_files:
    - course.yaml
-  # vars: 
-  #  course: "DAWS from Play"
-  #  trianer: "Sivakumar"
-  # vars_prompt:
-  #  name: enter course
-  #  private: false
+  vars: 
+   course: "DAWS from Play"
+   trianer: "Sivakumar"
+  vars_prompt:
+   name: enter course
+   private: false
   tasks:
   - name: Print vars
     vars: 
