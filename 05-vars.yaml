@@ -9,7 +9,7 @@
     vars:
     - course: "Terraform"
     ansible.builtin.debug:
-    msg: "Course is: {{ course }}, Trianer is: {{ Trainer }}"
+     msg: "Course is: {{ course }}, Trianer is: {{ Trainer }}"
 
 
 
