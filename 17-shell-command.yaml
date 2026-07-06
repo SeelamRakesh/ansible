@@ -1,0 +1,8 @@
+- name : Shell vs Command module
+  connection: local
+  hosts: local
+  tasks:
+  - name: Command module
+    ansible.builtin.command: cat /etc/Password
+  
+  
