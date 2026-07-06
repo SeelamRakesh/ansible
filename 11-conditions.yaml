@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   - number of sessions: 7
+   - number_of_sessions: 7
   tasks: 
   - name: Ansible sessions
     ansible.builtin.debug:
