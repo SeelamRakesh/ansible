@@ -3,6 +3,11 @@
   connection: local
   vars: 
    names: rakesh, rahul, ramesh, rohan
+   topics:
+    course: "DAWS"
+    duration: 180
+    trainer: "shiva"
+    language: "english"
   tasks:
   - name: greetings
     ansible.builtin.debug:
@@ -11,3 +16,7 @@
   - name: splitting variable
     ansible.builtin.debug:
      msg: "{{ names | split(',') }}"
+
+  - name: converting map to list 
+    ansible.builtin.debug:
+     msg: "{{ topics | dict2items }}"
