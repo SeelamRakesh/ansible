@@ -3,11 +3,30 @@
   connection: local
   vars: 
    names: rakesh, rahul, ramesh, rohan
-   topics:
+   topicsMap:
     course: "DAWS"
     duration: 180
     trainer: "shiva"
     language: "english"
+   topicsList: 
+    [
+        {
+            "key": "course",
+            "value": "DAWS"
+        },
+        {
+            "key": "duration",
+            "value": 180
+        },
+        {
+            "key": "trainer",
+            "value": "shiva"
+        },
+        {
+            "key": "language",
+            "value": "english"
+        }
+    ]
   tasks:
   - name: greetings
     ansible.builtin.debug:
@@ -19,4 +38,8 @@
 
   - name: converting map to list 
     ansible.builtin.debug:
-     msg: "{{ topics | dict2items }}"
+     msg: "{{ topicsMap | dict2items }}"
+  
+  - name: converting list to map
+    ansible.builtin.debug:
+     msg: "{{ topicsList | items2dict }}"
