@@ -11,26 +11,3 @@
     ansible.builtin.service:
      name: nginx
      state: started
-
-
-
-
-
-
-
-
-
-
-# - name: Niginx Installation
-#   hosts: web
-#   become: yes
-#   tasks: 
-#   - name: package Installation
-#     ansible.builtin.package:
-#      name: nginx
-#      state: present
-  
-#   - name: package start
-#     ansible.builtin.service:
-#      name: nginx
-#      state: started
