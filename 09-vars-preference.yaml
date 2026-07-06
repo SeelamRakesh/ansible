@@ -8,9 +8,9 @@
      private: false
    - name: enter trainer
      private: false
-  vars: 
-   course: "DAWS from Play"
-   trianer: "Sivakumar"
+  # vars: 
+  #  course: "DAWS from Play"
+  #  trianer: "Sivakumar"
   tasks:
   - name: Print vars
     # vars: 
