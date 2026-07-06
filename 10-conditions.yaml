@@ -1,10 +1,31 @@
-- name: demo on conditions
-  hosts: local
+- name: Conditions demo
   connection: local
+  hosts: local
   vars:
    IS_LIVE: false
-  tasks: 
+  tasks:
   - name: conditions
     ansible.builtin.debug:
-     msg: "Practice conditions"
+     msg: "Practicing Conditions"
     when: IS_LIVE
+
+
+
+
+
+
+
+
+
+
+
+# - name: demo on conditions
+#   hosts: local
+#   connection: local
+#   vars:
+#    IS_LIVE: false
+#   tasks: 
+#   - name: conditions
+#     ansible.builtin.debug:
+#      msg: "Practice conditions"
+#     when: IS_LIVE
