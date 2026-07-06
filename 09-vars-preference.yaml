@@ -4,7 +4,7 @@
   vars_files:
    - course.yaml
   vars: 
-   COURSE: "DAWS from Play "
+   COURSE: "DAWS from Play"
    TRAINER: "Sivakumar"
   vars_prompt:
    name: enter course
