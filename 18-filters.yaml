@@ -1,0 +1,7 @@
+- name: Filters Demo
+  hosts: local
+  connection: local
+  tasks:
+  - name: greetings
+    ansible.builtin.debug:
+     msg: "Hello | default ( good morning )"
