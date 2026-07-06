@@ -1,7 +1,13 @@
 - name: Filters Demo
   hosts: local
   connection: local
+  vars: 
+   names: rakesh, rahul, ramesh, rohan
   tasks:
   - name: greetings
     ansible.builtin.debug:
      msg: "Hello Rakesh, {{ GREETING | default ( 'good morning' ) }}"
+
+  - name: splitting variable
+    ansible.builting.debug:
+     msg: "{{ names | split(',') }}"
