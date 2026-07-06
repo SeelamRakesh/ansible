@@ -4,12 +4,11 @@
   vars_files:
    - course.yaml
   vars_prompt:
-  name: enter course
-  private: false
+   name: enter course
+   private: false
   vars: 
    course: "DAWS from Play"
    trianer: "Sivakumar"
- 
   tasks:
   - name: Print vars
     # vars: 
