@@ -6,9 +6,9 @@
   vars_prompt:
    name: enter course
    private: false
-  # vars: 
+  vars: 
   #  course: "DAWS from Play"
-  #  trianer: "Sivakumar"
+  trianer: "Sivakumar"
   tasks:
   - name: Print vars
     # vars: 
