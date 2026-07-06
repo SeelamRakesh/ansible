@@ -13,5 +13,6 @@
   - name: Print vars
     vars: 
      COURSE: "Ansible from TASK"
+     TRAINER: "Shiva"
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, Trainer is {{ TRAINER }}"
