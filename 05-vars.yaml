@@ -5,11 +5,13 @@
   - course: "DevOps"
   - trainer: "Rakesh"
   tasks:
+  - name: Print variables
   vars: 
   - course: "Ansible"
-  - name: Print variables
     ansible.builtin.debug:
      msg: " Course is {{ course }} and trainer is {{ trainer }}"
+
+
 
 
 
