@@ -7,6 +7,20 @@
      course: "Devops"
      duration: "6 months"
      hours: "200hrs"
+   tagsList: [
+        {
+            "key": "course",
+            "value": "Devops"
+        },
+        {
+            "key": "duration",
+            "value": "6 months"
+        },
+        {
+            "key": "hours",
+            "value": "200hrs"
+        }
+    ]
   tasks: 
   - name: Printing default value
     ansible.builtin.debug:
@@ -19,3 +33,7 @@
   - name: Converting map to list
     ansible.builtin.debug:
      msg: "{{ tagsMap | dict2items }}"
+  
+  - name: Converting list to map
+    ansible.builtin.debug:
+     msg: "{{ tagsList | dict2items }}"
