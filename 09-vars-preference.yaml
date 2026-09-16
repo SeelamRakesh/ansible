@@ -1,9 +1,9 @@
 - name: Variable preference
   hosts: local
   connection: local
-  vars:
-   course: "DevOps"
-   trainer: "Rakesh from Play"
+  # vars:
+  #  course: "DevOps"
+  #  trainer: "Rakesh from Play"
   vars_files:
    - course.yaml
   # vars_prompt:
