@@ -5,3 +5,7 @@
   - name: Checking AMI
     ansible.builtin.debug:
      msg: "{{ ansible_facts }}"
+  
+  - name: Check RedHat or not
+    anisble.builtin.debug:
+     msg: "Yes package manager is RedHat"
