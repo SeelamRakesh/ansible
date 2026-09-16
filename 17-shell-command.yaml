@@ -14,7 +14,7 @@
      msg: "{{ shell_output }}"
   
   - name: Shell module
-    ansible.butiltin.shell: ls -ltr > files.txt
+    ansible.builtin.shell: ls -ltr > files.txt
     register: files_output
 
   - name: Print output
