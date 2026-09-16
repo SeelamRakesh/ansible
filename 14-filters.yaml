@@ -3,6 +3,8 @@
   connection: local
   vars:
    topics: linux, shell, ansible, terraform
+   COURSE: "DAWS with Anisble"
+   myIP: 255.195.225.220
    tagsMap: 
      course: "Devops"
      duration: "6 months"
@@ -45,3 +47,15 @@
   - name: Converting yaml to JSON
     ansible.builtin.debug:
      msg: "{{ students_yaml | to_nice_json }}"
+
+  - name: To UpperCase
+    ansible.builtin.debug:
+     msg: "{{ COURSE | upper }}"
+
+  - name: To LowerCase
+    ansible.builtin.debug:
+     msg: "{{ COURSE | lower }}"
+  
+  - name: check IP
+    ansible.builtin.debug:
+     msg: "{{ myIP | ansible.utils.ipv4 }}"
