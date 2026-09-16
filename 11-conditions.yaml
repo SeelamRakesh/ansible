@@ -1,10 +1,10 @@
-- name: conditions demo
+- name: Conditions
   hosts: local
   connection: local
   vars:
-   - number_of_sessions: 7
-  tasks: 
-  - name: Ansible sessions
+   number_of_sessions = 7
+  tasks:
+  - name: Print sessions
     ansible.builtin.debug:
-     msg: "Ansible is 7 sessions"
-    when: number_of_sessions >= 7
+     msg: "Ansible is more that 5 sessions"
+    when: number_of_sessions > 5
