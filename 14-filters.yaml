@@ -5,5 +5,5 @@
    topics: linux, shell, ansible, terraform
   tasks: 
   - name: Splitting a Variable
-    ansible.butilin.debug:
+    ansible.builtin.debug:
      msg: "{{ topics | split(',') }}"
