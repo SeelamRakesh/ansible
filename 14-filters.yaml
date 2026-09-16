@@ -3,6 +3,10 @@
   connection: local
   vars:
    topics: linux, shell, ansible, terraform
+   tagsMap: 
+     course: "Devops"
+     duration: "6 months"
+     hours: "200hrs"
   tasks: 
   - name: Printing default value
     ansible.builtin.debug:
@@ -11,3 +15,7 @@
   - name: Splitting a Variable
     ansible.builtin.debug:
      msg: "{{ topics | split(',') }}"
+
+  - name: Converting map to list
+    ansible.builtin.debug:
+     msg: "{{ tags | maps2list }}"
