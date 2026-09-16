@@ -18,4 +18,4 @@
 
   - name: Converting map to list
     ansible.builtin.debug:
-     msg: "{{ tags | maps2list }}"
+     msg: "{{ tags | map2list }}"
