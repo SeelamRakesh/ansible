@@ -9,6 +9,6 @@
     vars: 
       course: "DevOps"
       trainer: "Rakesh from Task"
-    ansible.buitlin.debug:
+    ansible.builtin.debug:
       msg: "Course is {{ course }}, Trainer is {{ trainer }}"
 
