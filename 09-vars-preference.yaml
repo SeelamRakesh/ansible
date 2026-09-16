@@ -1,0 +1,14 @@
+name: Variable preference
+hosts: local
+connection: local
+vars:
+ course: "DevOps"
+ trainer: "Rakesh from Play"
+tasks:
+ - name: Print variables
+   vars: 
+    course: "DevOps"
+    trainer: "Rakesh from Task"
+   ansible.buitlin.debug:
+    msg: "Course is {{ course }}, Trainer is {{ trainer }}"
+
