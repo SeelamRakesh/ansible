@@ -1,61 +1,9 @@
-- name: Demo on filters
+- name: Ansible Filters
   hosts: local
   connection: local
-  vars: 
-   myIP: 255.195.225.220
-   COURSE: "DAWS with Anisble"
-   topics: linux, shell, terraform, ansible
-   tagsMap:
-    course: ansible
-    duration: 10
-    sessions: 8
-   tagsList: [
-        {
-            "key": "course",
-            "value": "ansible"
-        },
-        {
-            "key": "duration",
-            "value": 10
-        },
-        {
-            "key": "sessions",
-            "value": 8
-        }
-    ]
-  tasks:
-  - name: greetings
-    ansible.builtin.debug:
-     msg: "Hello Rakesh, {{ GREETING | default ('Good morning') }}"
-
-  - name: slipting Variable
-    ansible.builtin.debug:
-     msg: "{{ topics | split (',') }}" 
-
-  - name: converting map to list 
-    ansible.builtin.debug:
-     msg: "{{ tagsMap | dict2items }}" 
-  
-  - name: converting list to map
-    ansible.builtin.debug:
-     msg: "{{ tagsList | items2dict }}"
-  
-  - name: Yaml file into a variable
-    ansible.builtin.set_fact:
-     students_yaml: "{{ lookup('file', 'students.yaml') | from_yaml }}"
-
-  - name: Converting yaml to JSON
-    ansible.builtin.debug:
-     msg: "{{ students_yaml | to_nice_json }}"
-
-  - name: to UpperCase
-    ansible.builtin.debug:
-     msg: "{{ COURSE | upper }}"
-
-  - name: to LowerCase
-    ansible.builtin.debug:
-     msg: "{{ COURSE | lower }}"
-
-  - name: check IP
-    ansible.builtin.debug:
-     msg: "{{ myIP | ansible.utils.ipv4 }}"
+  vars:
+   topics: linux, shell, ansible, terraform
+  tasks: 
+  - name: Splitting a Variable
+    ansible.butilin.debug:
+     msg: "{{ topics | split(',') }}"
