@@ -50,7 +50,7 @@
   
   - name: To LowerCase
     ansible.builtin.debug:
-     msg: "{{ course | upper }}"
+     msg: "{{ course | lower }}"
   
   - name: check IP
     ansible.builtin.debug:
