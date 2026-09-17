@@ -1,1 +1,15 @@
-- Creating 
+- name: Creating user
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: Check user
+    ansible.builtin.command: id roboshop
+    register: user_output
+  
+  - name: Print output
+    anisble.builtin.debug:
+     msg: "{{ user_output }}"
+
+  - name: Creating user in server
+    ansible.buitlin.command: 
