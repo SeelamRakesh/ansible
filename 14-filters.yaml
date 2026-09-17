@@ -6,6 +6,8 @@
    tagsMap:
     course: "DevOps"
     Duration: "6 months"
+   course: "DevOps"
+   myIP: 255.195.225.220
    tagsList:
     [
         {
@@ -33,3 +35,23 @@
   - name: Converting List to map
     ansible.builtin.debug:
      msg: "{{ tagsList | items2dict }}"
+  
+  - name: Yaml file into a Variable
+    ansible.builtin.set_fact:
+     student_yaml: "{{ student.yaml | from_json }}"
+
+  - name: Converting yaml to JSON
+    ansible.builtin.debug:
+     msg: "{{ student_yaml | to_nice_json }}"
+  
+  - name: To UpperCase
+    ansible.builtin.debug:
+     msg: "{{ course | upper }}"
+  
+  - name: To LowerCase
+    ansible.builtin.debug:
+     msg: "{{ course | upper }}"
+  
+  - name: check IP
+    ansible.builtin.debug:
+     msg: "{{ myIP | ansible.utils.ipv4 }}"
