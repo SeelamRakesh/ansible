@@ -2,7 +2,10 @@
   hosts: local
   connection: local
   vars:
-   topics: Linux, Shell, Ansible, Terraform
+   topics: Linux, Shell, Ansible, Terraform\
+   tagsList:
+    - course: "DevOps"
+    - Duration: "6 months"
   tasks:
   - name: Printing default value
     ansible.builtin.debug:
@@ -11,3 +14,8 @@
   - name: Splitting a Variable
     ansible.builtin.debug:
      msg: "{{ topics | split(',') }}"
+  
+  - name: Converting map to list
+    ansible.builtin.debug:
+     msg: "{{ tagsList | dict2items }}"
+  
