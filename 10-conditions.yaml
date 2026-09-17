@@ -1,0 +1,10 @@
+- name: Conditions
+  hosts: local
+  connection: local
+  vars: 
+   IS_LIVE: true
+  tasks:
+  - name: Print variable based on Conditions
+    ansible.builtin.debug:
+     msg: "Hello world Iam learning Ansible"
+    when: IS_LIVE
