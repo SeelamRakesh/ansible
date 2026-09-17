@@ -4,6 +4,15 @@
   vars:
    course: "DevOps"
    trainer: "Rakesh from play"
+  vars_files:
+   - course.yaml
+  vars_prompt:
+   - name: course
+     prompt: Enter course name
+     private: false
+   - name: trainer
+     prompt: Enter trainer name
+     private: false
   tasks:
   - name: Print Variables
     vars: 
