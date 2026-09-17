@@ -8,7 +8,7 @@
     register: user_output
   
   - name: Print output
-    anisble.builtin.debug:
+    ansible.builtin.debug:
      msg: "{{ user_output }}"
 
   - name: Creating user in server
