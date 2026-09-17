@@ -6,8 +6,8 @@
   tasks:
   - name: Printing default value
     ansible.builtin.debug:
-    msg: "Hello Rakesh {{ GREETINGS | 'good morning'}}"
+     msg: "Hello Rakesh {{ GREETINGS | 'good morning'}}"
   
   - name: Splitting a Variable
     ansible.builtin.debug:
-    msg: "{{ topics | split(',') }}"
+     msg: "{{ topics | split(',') }}"
