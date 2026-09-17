@@ -3,7 +3,7 @@
   connection: local
   vars:
    topics: Linux, Shell, Ansible, Terraform\
-   tagsList:
+   tagsMap:
     - course: "DevOps"
     - Duration: "6 months"
   tasks:
